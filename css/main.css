@@ -320,6 +320,10 @@ textarea {
  font-weight: bold;
 }
 
+.menu--mobile{
+  display: none;
+}
+
 /* Estilos del main */
 .main {
 }
