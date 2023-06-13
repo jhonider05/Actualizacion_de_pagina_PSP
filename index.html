@@ -26,7 +26,7 @@
 
   <!-- Add your site or application content here -->
 
-  <header class="header">
+  <header id="header" class="header">
     <h1 class="header__title">PSP Desarrolladores</h1>
     <nav class="menu">
       <ul class="menu__list">
@@ -35,18 +35,19 @@
           <li id="menu__item3" class="menu__item"><a class="menu__link" href="#seccion3">Sección 3</a></li>
       </ul>
   </nav>
-  <nav class="menu menu--mobile">
+  <nav id="menu-mobile" class="menu menu--mobile">
     <ul class="menu__list">
         <li id="menu__item1" class="menu__item"><a class="menu__link" href="#seccion1">Sección 1</a></li>
         <li id="menu__item2" class="menu__item"><a class="menu__link" href="#seccion2">Sección 2</a></li>
         <li id="menu__item3" class="menu__item"><a class="menu__link" href="#seccion3">Sección 3</a></li>
     </ul>
-</nav>
+  </nav>
+  <button id="menu-mobile-siwtch" class="menu--mobile__switch"></button>
 </header>
 
 <main class="main">
     <section id="seccion1" class="section section--1">
-        <h2 class="section__title">Sección 1 (Formulario)</h2>
+        <h2 class="section__title">Contacto</h2>
         <p class="section__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem consectetur dolorem qui earum, modi delectus beatae officiis sit pariatur deserunt nam corrupti. Autem, id numquam ducimus nobis quo neque quis.</p>
         <form id="form" class="form">
           <div class="form__group">
@@ -74,16 +75,45 @@
         
     </section>
     <section id="seccion2" class="section section--2">
-        <h2 class="section__title">Sección 2 (Graficos)</h2>
-        <p class="section__content">Esta es la segunda sección de la página. Aquí puedes poner el contenido que quieras.</p>
+      <h2 class="section__title">Lista de Servicios </h2>
+        <p class="section__content">A contuniacion presentamos los servicios que ofertamos por el momento.</p>
+        <div class="servicios-container">
+          <div class="servicio">
+            <h3 class="servicio__title">Apps Moviles</h3>
+            <p class="servicio__description"></p>
+          </div>
+          <div class="servicio">
+            <h3 class="servicio__title">Juegos</h3>
+            <p class="servicio__description"></p>
+          </div>
+          <div class="servicio">
+            <h3 class="servicio__title">Paginas Web</h3>
+            <p class="servicio__description"></p>
+          </div>
+          <div class="servicio">
+            <h3 class="servicio__title">Aplicaciones Escritorio</h3>
+            <p class="servicio__description"></p>
+          </div>
+        </div>
+
     </section>
-    <section id="seccion3" class="section section--3">
-        <h2 class="section__title">Sección 3 (Servicios)</h2>
-        <p class="section__content">Esta es la tercera sección de la página. Aquí puedes poner el contenido que quieras.</p>
+    <section id="seccion3" class="section section--3">              
+      <h2 class="section__title">Nuestros Numeros</h2>
+      <p class="section__content">PSP Desarrolladores ha estado inmerso en varios proyectos a lo largo de los ultimos meses. Incursionamos principalmente en el desarrollo de aplicaciones moviles, juegos y paginas web. A continuacion presentamos algunos graficos que representan nuestros numeros</p>
+      <div class="charts-container">
+        <div class="chart">
+          <canvas id="myChartBar"></canvas>
+        </div>
+        <div class="chart">
+          <canvas id="myChartPie"></canvas>
+        </div>
+      </div>
+      
     </section>
 </main>
 <footer class="footer">
     <p class="footer__text">&copy Todos los derechos reservados.</p>
+
 </footer>
 
 
@@ -137,7 +167,9 @@
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.umd.js" integrity="sha512-CMF3tQtjOoOJoOKlsS7/2loJlkyctwzSoDK/S40iAB+MqWSaf50uObGQSk5Ny/gfRhRCjNLvoxuCvdnERU4WGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/main.js"></script>
+ 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
     window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
